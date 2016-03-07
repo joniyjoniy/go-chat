@@ -7,12 +7,6 @@
     </style>
   </head>
   <body>
-    <ul id="messages"></ul>
-    websocket chat application
-    <form id="chatbox">
-      <textarea></textarea>
-      <input type="submit" value="送信" />
-    </form>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
      $(function() {
@@ -37,11 +31,16 @@
                  alert("接続が終了しました。");
              }
              socket.onmessage = function(e) {
-                 messages.append($("<li>").text(e.data));
+                 messages.append($("<li>").tet(e.data));
              }
          }
      });
     </script>
-    <!-- <script src="../javascript/myjavascript.js"></script> -->
+    <ul id="messages"></ul>
+    websocket chat application
+    <form id="chatbox">
+      <textarea></textarea>
+      <input type="submit" value="送信" />
+    </form>
   </body>
 </html>
